@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#38bdf8">
+
+</head>
+
+<body>
+    <div class="weather-card">
+        <h1>🌤 Weather App</h1>
+
+        <div class="search-box d-flex gap-2">
+            <input id="cityInput" placeholder="Enter city name" />
+            <button class="btn btn-primary" onclick="getWeather()">Search</button>
+            <button class="btn btn-outline-danger" onclick="clearWeather()">❌</button>
+        </div>
+
+
+        <h2 id="city"></h2>
+        <p id="localTime" class="meta-time"></p>
+        <p id="LastUpdated" class="meta-time"></p>
+
+        <img id="icon" />
+
+        <div class="temp" id="temp"></div>
+        <div class="condition" id="condition"></div>
+
+        <!-- DETAILS -->
+        <div class="details row text-center mt-3">
+
+            <div class="col-4">
+                <div class="badge bg-primary p-2">
+                    💧 <span id="humidity"></span>%
+                </div>
+                <p>Humidity</p>
+            </div>
+
+            <div class="col-4">
+                <div class="badge bg-warning p-2">
+                    ☁ <span id="cloud"></span>%
+                </div>
+                <p>Cloud</p>
+            </div>
+
+            <div class="col-4">
+                <div class="badge bg-success p-2">
+                    🌧 <span id="rain"></span> mm
+                </div>
+                <p>Rain</p>
+            </div>
+
+        </div>
+
+        <p id="wind" class="mt-2"></p>
+
+        <!-- WOW FEATURE -->
+        <p id="insight" class="fw-bold mt-3"></p>
+
+        <div id="error" class="text-danger mt-2"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
